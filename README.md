@@ -82,7 +82,7 @@ Get band requests, ban, unban, timeout
 
 (only users in the admin white list)
 ```code
-!ban username //bans username from the cannel
+!ban username //bans username from the channel
 !timeout username //bans username during 600 (by default) seconds 
 !timeout username 60 //bans username during 60 seconds
 
