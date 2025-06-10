@@ -67,7 +67,7 @@ async function removeMod (userId) {
 async function ban (userId, duration = null) {
     const api = await broadcasterApiClient.getApiClient()
     await api.moderation.banUser(config.twitch.roomId, {user: userId, reason: '', duration: duration});
-    logger.info('User unbanned: ' + userId)
+    logger.info('User banned: ' + userId)
 }
 
 async function unban (userId) {
@@ -197,7 +197,7 @@ async function banUser (user, duration) {
     try {
         const response = await fetch(endpoint, options)
         const data = await response.json()
-        result = data?.data !== null ?? null
+        result = data?.data ?? null
 
     } catch {
         result = null
@@ -215,8 +215,7 @@ async function unBanUser (user) {
 
     try {
         const response = await fetch(endpoint, options)
-        const data = await response.json()
-        result = data?.status === 204 ?? null
+        result = response.status === 204
 
     } catch (e) {
         result = null
