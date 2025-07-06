@@ -103,3 +103,18 @@ Set stream title and game by using streamElements
 ```code
 !categoria IRL
 ```
+
+## WordPress plugin
+
+A WordPress plugin is provided in the `wordpress-plugin` directory. Copy the folder contents into your `wp-content/plugins` directory and activate the plugin **LK Social Embeds – Twitch (core)** from the WordPress admin.
+
+### Tokens
+
+The plugin exposes three shortcodes you can use in your posts or pages:
+
+* `[lk-twitch canal="{tu_canal}"]` – Muestra el estado en vivo y el reproductor del canal.
+* `[lk-twitch-profile canal="{tu_canal}"]` – Obtiene la información del perfil del canal.
+* `[lk-twitch-clips canal="{tu_canal}"]` – Lista los clips destacados del canal.
+
+Visit **Ajustes → LK Social Embeds** to configurar tu **Client ID**, **Client Secret** y el canal predeterminado. En esa misma página se muestra una lista de tokens disponibles para facilitar la integración.
+
